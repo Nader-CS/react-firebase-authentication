@@ -3,7 +3,6 @@ import { useAuthConetxt } from "../hooks/useAuthConetxt";
 
 export default function ProtectedRoute() {
   const context = useAuthConetxt();
-  console.log(context);
 
   if (context.authIsReady) {
     if (context.user) {

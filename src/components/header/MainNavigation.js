@@ -23,9 +23,9 @@ const MainNavigation = () => {
             </li>
           </>
         )}
-        {user && (
+        {user && user.displayName && (
           <>
-            <li>Hello {user.displayName.toUpperCase()}</li>
+            <li>Hello {user.displayName}</li>
             <li>
               <button className={classes.btn} onClick={logout}>
                 Logout

@@ -23,11 +23,8 @@ export const AuthContextProvider = (props) => {
   useEffect(() => {
     const unsub = auth.onAuthStateChanged((user) => {
       dispatch({ type: "AUTH_IS_READY", payload: user });
-    });
-
-    return () => {
       unsub();
-    };
+    });
   }, []);
   return (
     <AuthContext.Provider value={{ ...state, dispatch }}>
